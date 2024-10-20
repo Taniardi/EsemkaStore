@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.CartFragment"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRv"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        android:background="@drawable/rectangle"
+        android:paddingBottom="3dp"
+        tools:listitem="@layout/item_cart"
+        android:padding="10dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerService"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/rectangle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/lblTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Price : Rp. 0,00"
+            android:layout_above="@+id/btnCheckOut"
+            android:layout_alignParentEnd="true"
+            android:textSize="20dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnCheckOut"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
